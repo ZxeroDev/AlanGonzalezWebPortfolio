@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    color: white;
+    overflow-x: hidden;
+
+    /* ayuda a que el glass se vea mejor con video */
+}
+
+/* VIDEO DE FONDO (si lo agregas) */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* OVERLAY TRANSLÚCIDO */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: -1;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    margin: 40px;
+    border-radius: 25px;
+    padding: 30px;
+
+    /* casi transparente */
+    background: rgba(255, 255, 255, 0.06);
+
+    /* efecto vidrio */
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    /* borde tipo glass */
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    /* sombra suave */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header span {
+    color: #ff2a2a;
+}
+
+nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff2a2a;
+}
+
+.btn {
+    border: 1px solid #ff2a2a;
+    padding: 8px 15px;
+    border-radius: 8px;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0;
+}
+
+.hero-text {
+    max-width: 400px;
+}
+
+.mini {
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.rgb {
+    color: #ff2a2a;
+}
+
+.desc {
+    margin: 20px 0;
+}
+
+.cv {
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid #ff2a2a;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cv:hover {
+    background: #ff2a2a;
+}
+
+/* VIDEO LOCAL (hero) */
+.hero-media video {
+    width: 280px;
+    border-radius: 20px;
+    border: 2px solid #ff2a2a;
+}
+
+/* SECCIONES */
+.section {
+    padding: 60px 0;
+}
+
+/* GRID PROYECTOS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+/* CARDS GENERALES */
+.card {
+    background: #111;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #ff2a2a;
+}
+
+/* SKILLS CONTAINER */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* SKILL CARD */
+.skills-container .card {
+    width: 140px;
+    height: 140px;
+    background: #0f0f0f;
+    border-radius: 18px;
+    border: 1px solid #222;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.3s;
+}
+
+.skills-container .card img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.skills-container .card:hover {
+    transform: translateY(-12px) scale(1.05);
+}
+
+/* COLORES SKILLS */
+.card.html:hover {
+    background: #2b1208;
+    box-shadow: 0 0 15px #e44d26;
+}
+
+.card.css:hover {
+    background: #0a1a2b;
+    box-shadow: 0 0 15px #264de4;
+}
+
+.card.js:hover {
+    background: #2b2a08;
+    box-shadow: 0 0 15px #f7df1e;
+}
+
+.card.java:hover {
+    background: #2b0f0f;
+    box-shadow: 0 0 15px #ea2d2e;
+}
+
+.card.python:hover {
+    background: #0a1f2b;
+    box-shadow: 0 0 15px #ffd43b;
+}
+
+.card.mysql:hover {
+    background: #0a1f2b;
+    box-shadow: 0 0 15px #00758f;
+}
+
+.card.cpp:hover {
+    background: #0f162b;
+    box-shadow: 0 0 15px #00599c;
+}
+
+/* FORM */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input,
+.form textarea {
+    margin: 10px 0;
+    padding: 10px;
+    background: #111;
+    border: 1px solid #333;
+    color: white;
+}
+
+.form button {
+    background: #ff2a2a;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* SOCIAL CARDS */
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.up,
+.down {
+    display: flex;
+    gap: 0.5em;
+}
+
+/* botones sociales */
+.card1, .card2, .card3, .card4 {
+    width: 90px;
+    height: 90px;
+    border: none;
+    background: white;
+    border-radius: 10px;
+    transition: 0.2s ease-in-out;
+}
+
+/* hover base */
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+    cursor: pointer;
+    scale: 1.1;
+}
+
+/* opcional: puedes dejar tus estilos SVG como los tienes */

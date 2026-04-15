@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* VIDEO FONDO */
+.bg-video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CAPA OSCURA */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55);
+}
+
+/* CONTENIDO */
+.ui {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* BARRA SUPERIOR */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* TEXTO RGB */
+.topbar p:last-child,
+.title span {
+    background: linear-gradient(90deg, cyan, magenta, red);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: rgbText 5s linear infinite;
+}
+
+@keyframes rgbText {
+    0% { background-position: 0% }
+    100% { background-position: 200% }
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    margin-top: 100px;
+}
+
+/* TITULO */
+.title {
+    font-size: 50px;
+}
+
+/* HOVER ROJO */
+.title span:hover,
+.topbar p:last-child:hover {
+    background: none;
+    color: red;
+
+    text-shadow:
+        0 0 5px red,
+        0 0 15px red;
+}
+
+/* BOTÓN */
+.btn {
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid red;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.btn a{
+    text-decoration: none;
+        color: white;
+}
+
+/* HOVER BOTÓN */
+.btn:hover {
+    background: red;
+
+    box-shadow:
+        0 0 10px red,
+        0 0 20px red;
+
+    transform: scale(1.05);
+}
+
+/* PANEL IZQUIERDO */
+.left-panel {
+    position: absolute;
+    top: 120px;
+    left: 20px;
+
+    padding-left: 10px;
+    border-left: 2px solid red;
+}
+
+/* PANEL DERECHO */
+.right-panel {
+    position: absolute;
+    top: 120px;
+    right: 20px;
+
+    padding-right: 10px;
+    border-right: 2px solid red;
+    text-align: right;
+}
+
+/* TITULOS */
+.left-panel h3,
+.right-panel h3 {
+    color: red;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE SIMPLE */
+@media (max-width: 768px) {
+
+    .hero {
+        margin-top: 60px;
+    }
+
+    .left-panel,
+    .right-panel {
+        position: static;
+        border: none;
+        margin: 20px;
+        text-align: left;
+    }
+
+}
